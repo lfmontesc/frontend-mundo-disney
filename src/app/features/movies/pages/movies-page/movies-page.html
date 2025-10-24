@@ -1,0 +1,11 @@
+<h2>Películas</h2>
+<button (click)="loadMovies()">Recargar</button>
+
+<ul>
+  @for (movie of movies; track movie.id) {
+    <li>{{ movie.titulo }}</li>
+  }
+  @empty {
+    <li>No items found</li>
+  }
+</ul>
